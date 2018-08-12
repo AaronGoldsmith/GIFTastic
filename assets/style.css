@@ -5,16 +5,25 @@ body{
     min-height: 70px;
 }
 #rating{
-    padding: 12px;
+    margin: 3px 0px;
 }
 .animal{
     display:inline-table;
-    margin: 5px;
-    box-shadow: 0px 0px 14px 0.2rem #000;
+    margin: 5px 5px 35px 5px;
+}
+img{
+    box-shadow: 0px 0px 10px #fff;
+}
+img:hover{
+    cursor: pointer;
 }
 /* STYLING OF TEXT INPUT */
 #searchContainer{
- padding: 10px 40px 0px 0px;   
+   padding: 10px 20px 0px 0px;   
+}
+#searchWrap{
+    position: relative;
+    width:100%;
 }
 input:focus,input:active,input{
     outline: none;
@@ -25,8 +34,8 @@ button:focus, button:active{
 }
 .fas{
     color: #fff;
-    position: relative;
-    left: 40px;
+    position: absolute;
+    left: 30px;
     top: 25px;
 }
 input[type="text"]:hover .fas{
@@ -42,6 +51,7 @@ input[type="text"] {
     caret-color: #fff;
     font-size: 1.3em;
     float: left;
+    width: 100%;
 }
 ::-webkit-input-placeholder { 
     color: white;
