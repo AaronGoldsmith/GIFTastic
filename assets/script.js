@@ -73,8 +73,15 @@ showButtons();
 
 $(document).ready(function(){
     $("#animalImages").on("click","#gif",function(){
-        if($(this).attr("image-state")=="still"){
+        var state = $(this).attr("image-state");
+        if(state ==="still"){
             turnOn($(this))
+            $(this).attr("image-state","live");
+
+        }
+        else if(state =="live"){
+            turnOff($(this))
+            $(this).attr("image-state","still");
         }
     })
 })
