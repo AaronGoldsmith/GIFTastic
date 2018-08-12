@@ -6,3 +6,4 @@
   
   • Use console to pull images dynamically
   #########################################
+  TODO:  Activate gif when clicked on
