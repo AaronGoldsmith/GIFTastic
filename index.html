@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<DOCTYPE>
+    <html>
+        <head>
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+            <link rel="stylesheet" type="text/css" href="assets/style.css">
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+            <meta charset="utf-8" />
+            <style>div{border:"1px solid #000"}</style>
+  
+
+        </head>
+        <body>
+             <div clas="container">
+                <div class="row border m-5" id="animalLabels">
+
+                </div>
+                <div class="row" id="mainContent ">
+                    <div id="animalImages" class="col-md-7"></div>
+                    <div id="searchContainer" class="col-md-4 my-2 mx-3 border">
+                            <!-- magnifying glass -->
+                           
+                        <form class="form-inline ">  
+                            <label for="searchbar" class=" ml-3 text-light">Enter an Animal</label>
+ 
+                            <div id="searchWrap">
+                                <svg class="svg" viewBox="0 0 512 512" width="2em">
+                                </svg>
+                                <input class="mr-sm-2" id="searchbar" type="text"/>
+                             </div> 
+                            <input class="btn btn-input ml-2" id="GIFME" type="submit" value="Get Gifs"/>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </body> 
+        <script>
+                var animalList = [];
+                function showButtons(){
+                    $("#animalLabels").empty()
+                    aniamList.forEach(animal,function(){
+                        console.log(animal);
+                    })
+                }
+  
+                $("#GIFME").on("click",function(event){
+                    event.preventDefault();
+
+                    console.log("here")
+                    var search = $("#searchbar") 
+                    var userInput = search.val();
+                    if(userInput.length>0){
+                        // do something with the value
+                      var btn = $("<button>");
+                      btn.addClass("animal")
+                      btn.attr("data-animal",userInput);
+                      btn.append(userInput)
+                      $("#animalLabels").append(btn);
+                        // clear the input
+                      search.val("")
+                    }
+                  
+                })
+            </script>
+    </html>
+</DOCTYPE>

@@ -1,0 +1,45 @@
+body{
+    background: #33333360;
+}
+
+
+/* STYLING OF TEXT INPUT */
+#searchContainer{
+ padding: 10px 40px 0px 0px;   
+}
+input:focus,input:active,input{
+    outline: none;
+}
+button:focus{
+    box-shadow:inset 0 0 6px 0.01rem dodgerblue
+}
+svg{
+    fill: white;
+}
+path{
+    position: fixed;
+}
+
+input[type="text"] {
+    padding: 10px 15px 10px 55px;
+    margin: 10px 10px 5px 10px;
+    background-color: dodgerblue;
+    color: #fff;
+    border-top:none;
+    border-right: none;
+    caret-color: #fff;
+    font-size: 1.3em;
+    float: left;
+}
+::-webkit-input-placeholder { 
+    color: white;
+    padding: 3px;
+  }
+input[type="submit"] {
+    padding: 2px 8px;  
+    border: 1px solid #333333aa;  
+}
+input[type="submit"]:active {
+    border:inherit;
+    outline: none
+}
