@@ -1,5 +1,4 @@
 var animalList = ["Kitty","Rhino","Donkey","Zebra","Doge"];
-var activeAnimal = "";
 var answer;
 
     /* CLICKING ON AN ANIMAL BUTTON 
@@ -24,9 +23,6 @@ var answer;
          img.attr("src",img.attr("image-still"))
     }
     $("#animalLabels").on("click","button", function(){
-        if(activeAnimal!=""){
-            $("#animalImages").empty();
-        }
         var animal = $(this).attr("data-animal").toLowerCase();
         var queryURL = 'http://api.giphy.com/v1/gifs/search?q=' + animal + '&api_key=LunLEs3GAJawNrYS6bzD2RHiGCt35Iny&limit=10';
         $.ajax({
