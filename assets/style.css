@@ -3,19 +3,25 @@ body{
 }
 #animalLabels{
     min-height: 70px;
+    padding: 10px 20px;
 }
 #rating{
-    margin: 3px 0px;
+    margin: 4px 0px;
+    width: 100%;
+    text-align: center;
 }
 .animal{
     display:inline-table;
     margin: 5px 5px 35px 5px;
 }
+textarea{
+    display: table;
+    width: 100%;
+    padding: 2px;
+}
 img{
     box-shadow: 0px 0px 10px #fff;
-}
-img:hover{
-    cursor: pointer;
+    /* width:100%; */
 }
 /* STYLING OF TEXT INPUT */
 #searchContainer{
@@ -36,7 +42,7 @@ button:focus, button:active{
     color: #fff;
     position: absolute;
     left: 30px;
-    top: 25px;
+    top: 30px;
 }
 input[type="text"]:hover .fas{
     color: #333;
@@ -59,9 +65,11 @@ input[type="text"] {
   }
 input[type="submit"] {
     padding: 2px 8px;  
-    border: 1px solid #333333aa;  
 }
 input[type="submit"]:active {
     border:inherit;
     outline: none
+}
+img:hover{
+    cursor: pointer;
 }
