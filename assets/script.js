@@ -1,4 +1,4 @@
-var animalList = [];
+var animalList = ["Kitty","Rhino","Donkey","Zebra","Doge"];
 var activeAnimal = "";
 var answer;
 
@@ -35,21 +35,28 @@ var answer;
         }).then(function(response){
             var results = response.data;
             var imageContainer = $("<div>")
-            
+            console.log(results)
+
+            // iterate through results
             for(i in results){
                 var imageOutter = $("<div class='animal'>")
                 var animalImg = $("<img id='gif'>")
+
+                // add attributes to image
                 animalImg.attr("src",results[i].images.fixed_height_still.url)
                 animalImg.attr("image-state","still");                                  
                 animalImg.attr("image-still",results[i].images.fixed_height_still.url)
                 animalImg.attr("image-live",results[i].images.fixed_height.url)
                 animalImg.attr("data-animal",animal);
-
             
                 var p = $("<p id='rating'>").text("Rated: " + results[i].rating.toUpperCase());
-
+                var captionIt = $("<textarea>")
+                captionIt.css('visibility','hidden')
                 imageOutter.append(p);
                 imageOutter.append(animalImg);
+                imageOutter.append(captionIt);
+
+                // add each image div to the image container
                 imageContainer.prepend(imageOutter)
             }
             $("#animalImages").html(imageContainer)
@@ -64,7 +71,7 @@ function showButtons(){
     for(animal of animalList){
         var btn = $("<button>")
         btn.text(animal.toUpperCase())
-        btn.addClass("animal-button btn btn-primary mx-3 my-3");
+        btn.addClass("animal-button btn btn-info mx-3 my-3");
         btn.attr("data-animal",animal.toUpperCase())
         $("#animalLabels").append(btn)
     }
@@ -72,16 +79,25 @@ function showButtons(){
 showButtons();
 
 $(document).ready(function(){
-    $("#animalImages").on("click","#gif",function(){
-        var state = $(this).attr("image-state");
-        if(state ==="still"){
-            turnOn($(this))
-            $(this).attr("image-state","live");
-
-        }
-        else if(state =="live"){
-            turnOff($(this))
-            $(this).attr("image-state","still");
-        }
+    $("#animalImages").on("mouseenter","#gif",function(){
+        turnOn($(this));
+        $(this).attr("image-state","live")
     })
+    $("#animalImages").on("mouseleave","#gif",function(){
+        turnOff($(this))
+        $(this).attr("image-state","still");
+    });
+    // $("#animalImages").on("click",function(){
+    //     var state = $(this).attr("image-state");
+    //     if(state ==="still"){
+    //         turnOn($(this))
+    //         $(this).attr("image-state","live");
+
+    //     }
+    //     else if(state =="live"){
+    //         turnOff($(this))
+    //         $(this).attr("image-state","still");
+    //     }
+    // });
+
 })
