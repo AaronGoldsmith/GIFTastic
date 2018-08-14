@@ -7,7 +7,9 @@ body{
 }
 #rating{
     margin: 4px 0px;
-    width: 100%;
+    width: auto;
+    background: #bebebe62;
+    border-bottom: 2px solid #333;
     text-align: center;
 }
 .animal{
@@ -21,32 +23,39 @@ textarea{
 }
 img{
     box-shadow: 0px 0px 10px #fff;
-    /* width:100%; */
+    width:100%;
 }
+
 /* STYLING OF TEXT INPUT */
 #searchContainer{
    padding: 10px 20px 0px 0px;   
 }
+
 #searchWrap{
     position: relative;
     width:100%;
 }
+
 input:focus,input:active,input{
     outline: none;
 }
+
 button:focus, button:active{
     outline: none;
     border:none;
 }
+
 .fas{
     color: #fff;
     position: absolute;
     left: 30px;
     top: 30px;
 }
+
 input[type="text"]:hover .fas{
     color: #333;
 }
+
 input[type="text"] {
     padding: 10px 15px 10px 55px;
     margin: 10px 10px 5px 10px;
