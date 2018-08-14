@@ -5,5 +5,4 @@
   • Practice querying specific fields that will be needed
   
   • Use console to pull images dynamically
-  #########################################
   TODO:  Activate gif when clicked on
