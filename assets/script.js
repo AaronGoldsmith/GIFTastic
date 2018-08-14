@@ -1,15 +1,35 @@
-var animalList = ["Kitty", "Rhino", "Donkey", "Zebra", "Doge"];
-
+var animalList = ["kitten", "tortoise", "hedgehog", "zebra", "penguin","chipmunk"];
+var interval;
 /* CLICKING ON AN ANIMAL BUTTON 
 /* CREATING THE ANIMAL BUTTON FROM USER INPUT */
 $("#GIFME").on("submit click", function(event) {
     event.preventDefault();
-    var term = $("#searchbar").val();
-    if (term.length > 0) {
-        term.trim();
+    var term = $("#searchbar").val().toLowerCase();
+    if (term.length > 0 && animalList.indexOf(term)==-1) {
         animalList.push(term)
         $("#searchbar").val("")
     }
+    else if(animalList.indexOf(term)>-1){  
+        $("#searchbar").css({
+            "background":"rgba(200,0,0,0.5)",
+            "border":"2px solid red",
+        });
+        setTimeout(function(){
+            $("#searchbar").css( "text-decoration","underline line-through");
+        },800);
+        setTimeout(function(){
+                    $("#searchbar").val("");
+                    $("#searchbar").css({
+                        "background":"dodgerblue",
+                        "border":"inherit",
+                        "text-decoration":"none"
+                    });  
+        },1500);
+
+       
+
+    }
+       
     // reset search bar text
     showButtons();
 });
