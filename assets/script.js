@@ -44,7 +44,7 @@ function turnOff(img) {
 }
 $("#animalLabels").on("click", "button", function() {
     var animal = $(this).attr("data-animal").toLowerCase();
-    var queryURL = 'http://api.giphy.com/v1/gifs/search?q=' + animal + '&api_key=LunLEs3GAJawNrYS6bzD2RHiGCt35Iny&limit=10';
+    var queryURL = 'https://api.giphy.com/v1/gifs/search?q=' + animal + '&api_key=LunLEs3GAJawNrYS6bzD2RHiGCt35Iny&limit=10';
     $.ajax({
         url: queryURL,
         method: "GET"
