@@ -1,8 +1,6 @@
 # GIFTastic
 
-### What should I accomplish before I begin pseudo-coding a possible solution?
-  • Use GIPHY API for practice   
-  • Practice querying specific fields that will be needed
-  
-  • Use console to pull images dynamically
-  TODO:  Activate gif when clicked on
+
+Easily meme-ify gifs from giphy. 
+Technology used: **Giphy API**
+![Imgur](https://i.imgur.com/bsCamoC.gif)
